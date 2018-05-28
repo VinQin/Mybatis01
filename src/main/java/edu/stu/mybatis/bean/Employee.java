@@ -10,6 +10,12 @@ public class Employee {
 
     }
 
+    public Employee(String lastName, String email, String gender) {
+        this.lastName = lastName;
+        this.email = email;
+        this.gender = gender;
+    }
+
     public Employee(Integer id) {
         this.id = id;
     }
@@ -52,7 +58,7 @@ public class Employee {
                 "id=" + id +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", gender='" + gender + '\'' +
+                ", gender='" + (gender.charAt(0) == '0' ? "Female" : "Male") + '\'' +
                 '}';
     }
 }
