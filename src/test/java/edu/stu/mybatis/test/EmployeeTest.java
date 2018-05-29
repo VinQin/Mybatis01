@@ -42,10 +42,17 @@ public class EmployeeTest {
     public void getEmployeeByMethodFullName() {
         if (sqlSessionFactory != null) {
             SqlSession openSession = sqlSessionFactory.openSession();
-            Employee e1 = openSession.selectOne("edu.stu.mybatis.dao.EmployeeMapper.getEmployeeById", 1);
-            System.out.println(e1);
 
-            openSession.close();
+            try {
+                Employee e1 = openSession.selectOne("edu.stu.mybatis.dao.EmployeeMapper.getEmployeeById", 1);
+                System.out.println(e1);
+            } finally {
+
+                openSession.close();
+            }
+
         }
     }
+
+
 }
