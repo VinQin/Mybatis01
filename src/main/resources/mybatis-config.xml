@@ -23,6 +23,8 @@
         </environment>
     </environments>
 
+
+    <!-- 将自定义的sql映射文件注册到本全局配置文件中 -->
     <mappers>
         <mapper resource="edu/stu/mybatis/dao/EmployeeMapper.xml"/>
     </mappers>

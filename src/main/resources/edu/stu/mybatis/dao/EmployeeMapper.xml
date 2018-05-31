@@ -4,6 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.stu.mybatis.dao.EmployeeMapper">
 
+    <!--
+        id属性：标签的唯一标识，id属性的值为接口中对应的方法名;
+        resultType属性：返回值类型（即从数据库中查出结果之后，封装的返回值类型），resultType属性的值必须为返回值类型的全类名;
+        #{xxx}：从传递过来的参数中取出值，xxx表示传递过来的参数名;
+     -->
     <!-- Employee getEmployeeById(Integer id); -->
     <select id="getEmployeeById" resultType="edu.stu.mybatis.bean.Employee">
         select * from tbl_employee where id = #{id}
