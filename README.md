@@ -1,2 +1,2 @@
 # Mybatis01
-The first project of Mybatis self-studying.
+This project is used to practice Mybatis framework.
